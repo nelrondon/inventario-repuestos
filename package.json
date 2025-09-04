@@ -1,0 +1,19 @@
+{
+  "name": "inventario-repuestos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:frontend": "pnpm --prefix frontend run dev",
+    "start:backend": "pnpm --prefix backend run start",
+    "start:all": "concurrently \"pnpm run start:frontend\" \"pnpm run start:backend\"",
+    "install:all": "concurrently \"pnpm install --prefix frontend\" \"pnpm install --prefix backend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

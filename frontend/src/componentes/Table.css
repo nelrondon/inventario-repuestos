@@ -1,0 +1,55 @@
+.app-table {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--emph-color);
+  overflow: hidden;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px #0002;
+
+  thead {
+    background: var(--secondary-bg);
+  }
+
+  tbody {
+    background: var(--primary-bg);
+    color: var(--text-color);
+    font-size: 1em;
+    line-height: 1.1;
+
+    th {
+      color: var(--emph-color);
+    }
+
+    tr:nth-child(even) td,
+    tr:nth-child(even) th {
+      background: #0002;
+    }
+  }
+
+
+  td,
+  th {
+    padding: 20px 10px;
+    border: 1px solid var(--border-color);
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    transition: all .3s ease;
+
+    button {
+      width: 100%;
+      height: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  th {
+    color: var(--primary-bg);
+    line-height: 1;
+  }
+}
