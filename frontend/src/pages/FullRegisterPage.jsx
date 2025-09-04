@@ -25,7 +25,7 @@ export const FullRegisterPage = () => {
     return modalRef.current.close();
   }, [openModal, data]);
 
-  const handleDelete = () => {
+  const handleDelete = async () => {
     const id = data._id;
     const confirmation = confirm(
       "¿Estas seguro que deseas continuar con la eliminación?"
@@ -33,7 +33,7 @@ export const FullRegisterPage = () => {
     if (confirmation) {
       deleteRepuestosApi(id);
     }
-    getRepuestos();
+    await getRepuestos();
     navigate("/");
   };
   const handleModify = () => {
