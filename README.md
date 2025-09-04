@@ -47,9 +47,13 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local.
 
 1. Clona el repositorio en tu máquina local.
 2. Navega a la raíz del proyecto.
-3. Instala todas las dependencias (frontend y backend) con un solo comando:
+3. Instala las dependencias con `pnpm install`.
    ```bash
-   pnpm install:all
+   pnpm install
+   ```
+4. Instala todas las dependencias (frontend y backend) con un solo comando:
+   ```bash
+   pnpm run install:all
    ```
 
 ### Ejecución
@@ -57,7 +61,7 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local.
 Desde la raíz del proyecto, ejecuta el siguiente comando para iniciar tanto el servidor del backend como la aplicación de frontend simultáneamente.
 
 ```bash
-pnpm start:all
+pnpm run start:all
 ```
 
 - El **backend** se ejecutará en `http://localhost:4000`.
