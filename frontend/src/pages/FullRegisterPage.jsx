@@ -31,10 +31,13 @@ export const FullRegisterPage = () => {
       "¿Estas seguro que deseas continuar con la eliminación?"
     );
     if (confirmation) {
-      deleteRepuestosApi(id);
+      await deleteRepuestosApi(id);
+      console.log("Eliminado");
     }
     await getRepuestos();
+    console.log("fetch completo");
     navigate("/");
+    console.log("regreso al inicio");
   };
   const handleModify = () => {
     navigate(`/modify/${data._id}`);
