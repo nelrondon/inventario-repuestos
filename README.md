@@ -75,7 +75,6 @@ pnpm run start:all
 inventario-repuestos/
 ├── backend/         # Contiene el código de la API REST (Node.js y Express)
 │   ├── package.json
-│   ├── .env.example # Archivo de configuración de entorno
 │   ├── src/
 
 │   └── index.js
@@ -85,8 +84,6 @@ inventario-repuestos/
 │   └── package.json
 └── README.md        # Este archivo
 ```
-
-NOTA: Debes crear un archivo .env en el backend (backend/.env) en donde tendras tu SECRET_KEY para la encriptacion de los JWT, sigue la estructura de .env.example
 
 ### Funcionamiento de la API
 
