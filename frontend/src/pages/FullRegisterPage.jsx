@@ -31,7 +31,7 @@ export const FullRegisterPage = () => {
       "¿Estas seguro que deseas continuar con la eliminación?"
     );
     if (confirmation) {
-      deleteRepuestosApi(id);
+      await deleteRepuestosApi(id);
     }
     await getRepuestos();
     navigate("/");

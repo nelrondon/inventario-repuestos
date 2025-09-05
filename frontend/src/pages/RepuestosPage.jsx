@@ -3,11 +3,14 @@ import "./Forms.css";
 import { useNavigate } from "react-router-dom";
 import { OptionsIcon } from "../componentes/Icons.jsx";
 import { useEffect, useRef, useState } from "react";
+import { useParts } from "../context/PartsContext.jsx";
 
-export const RepuestosPage = ({ parts }) => {
+export const RepuestosPage = () => {
   const modalRef = useRef();
   const [openModal, setOpenModal] = useState(false);
   const [data, setData] = useState({});
+
+  const { parts } = useParts();
 
   useEffect(() => {
     if (openModal) {
@@ -24,6 +27,10 @@ export const RepuestosPage = ({ parts }) => {
   const handleViewManufacturer = () => {
     navigate(`/info/fab/${data.manufacturer}`);
   };
+
+  useEffect(() => {
+    console.log("cambio");
+  }, [parts]);
 
   return (
     <>
@@ -55,8 +62,8 @@ export const RepuestosPage = ({ parts }) => {
             </tr>
           </thead>
           <tbody>
-            {parts &&
-              parts.map((part) => (
+            {parts?.parts &&
+              parts?.parts.map((part) => (
                 <tr key={part.model}>
                   <th scope="row">{part.name}</th>
                   <td>{part.model}</td>
